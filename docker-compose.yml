@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  jenkins:
+    build: .
+    ports:
+      - "8080:8080"          # Порт для доступа к Jenkins
+      - "50000:50000"        # Порт для Jenkins slave
+    volumes:
+      - jenkins_home:/var/jenkins_home  # Хранилище данных Jenkins
+      - /var/run/docker.sock:/var/run/docker.sock # Для запуска Docker-контейнеров внутри Jenkins
+volumes:
+  jenkins_home:
