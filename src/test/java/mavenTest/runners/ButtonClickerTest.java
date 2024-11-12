@@ -1,4 +1,4 @@
-package mavenTest;
+package mavenTest.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "mavenTest.steps",
-        tags = "@all",
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        glue = {"mavenTest"},
+        tags = "@theButton",
+        plugin = {"pretty", "html:target/login-report.html"}
 )
-public class RunnerTest {
+public class ButtonClickerTest {
 }

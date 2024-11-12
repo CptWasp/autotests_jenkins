@@ -1,6 +1,6 @@
-@all @eng
+@all @actions
 Feature: Sample feature
   Scenario: Sample scenario
-    Given I have a sample feature file
-    When I run the test
-    Then I should see the test pass
+    Given Пользователь открывает сайт
+    When Пользователь запускает тест
+    Then Пользователь запускает тест
